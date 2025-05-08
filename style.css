@@ -1,0 +1,432 @@
+/* CSS Custom Properties (Variables) */
+:root {
+    --primary-color: #000000;       /* Dark, Gymshark-like */
+    --secondary-color: #202020;     /* Slightly lighter dark */
+    --accent-color: #007bff;         /* A sample accent, can be changed (e.g., a vibrant color) */
+    --background-light: #f4f4f4;
+    --background-hero: rgba(128, 128, 128, 0.226);
+    --background-card: #ffffff;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --text-muted: #555555;
+    --text-nav-hover: #a0a0a5;
+    --font-primary: 'Montserrat', sans-serif;
+    --shadow-soft: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-medium: 0 4px 15px rgba(0,0,0,0.1);
+    --shadow-strong: 0 8px 25px rgba(0,0,0,0.15);
+    --border-radius-sm: 5px;
+    --border-radius-md: 8px;
+}
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+/* General Body Styles */
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased; /* Improves font rendering on WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;  /* Improves font rendering on Firefox */
+}
+
+/* Header and Navigation */
+header {
+    background-color: #000000; /* Dark background, common in Gymshark */
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-soft);
+}
+.main{
+    background-image: url(AI.jpg);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0; /* Add some padding for better touch targets if needed */
+    position: relative; /* For potential underline effect */
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--text-nav-hover);
+    opacity: 0.85;
+}
+
+/* General Focus Style for Accessibility */
+*:focus-visible {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
+}
+
+/* Hero Section */
+.hero {
+    background:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url('AI.jpg'); 
+    background-size: cover; /* Ensures the image covers the entire hero section */
+    background-position: center; /* Centers the image in the section */
+    color: var(--text-light); /* Change text color to light if background is dark, adjust as needed */
+    padding: 60px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem; /* Slightly larger */
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: white; /* Make title stand out more */
+}
+
+.hero p {
+    font-size: 1.3rem; /* Slightly larger */
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.932);
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px 20px;
+    padding: 60px 20px; /* More vertical spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #000000; /* Darker heading color */
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px;
+}
+
+
+.person-card {
+    background-color: #fff; /* White cards */
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-medium);
+    padding: 25px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.person-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+}
+
+.person-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio e.g., 4:3, 16:9, 1:1 */
+    object-fit: cover; /* Ensures image covers the area well */
+    border-radius: var(--border-radius-sm);
+    margin-bottom: 15px;
+    background-color: #e9e9e9; /* Placeholder color while image loads */
+}
+
+.person-card h3 {
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+}
+
+.person-card .person-role {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    font-style: italic;
+    display: block; /* Ensures it takes its own line if needed */
+}
+
+.person-card .person-description {
+    font-size: 1rem;
+    color: #181717;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.btn-toggle-details { /* Renamed from .btn-details and will be a button */
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    text-decoration: none; /* Buttons don't have this by default, but good to keep if it was an <a> */
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    border: 2px solid transparent; /* For focus state consistency */
+}
+
+.btn-details:hover,
+.btn-toggle-details:hover,
+.btn-toggle-details:focus-visible { /* Combined hover and focus for similar effect */
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn-details:active 
+.btn-toggle-details:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* Styles for the expandable content section */
+.person-details-content {
+    display: none; /* Hidden by default, JS will toggle this */
+    margin-top: 20px; /* Space above the expanded content */
+    padding-top: 20px; /* Space inside the expanded content */
+    border-top: 1px solid #eee; /* A light separator line */
+}
+
+.person-details-content.active {
+    display: block; /* Show when .active class is added */
+}
+
+.person-details-content h4 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+
+/* About Section */
+.about-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto; /* Increased margin */
+    background-color: var(--background-card);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.about-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-nav-hover); /* Using nav hover as it's a lighter shade of text on dark bg */
+    text-align: center;
+    padding: 5px 0;
+}
+
+/* Mobile Menu Toggle (Hamburger Icon) - Visuals only, JS needed for functionality */
+.menu-toggle {
+    display: none; /* Hidden by default, shown in media query */
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.8rem; /* Adjust size as needed */
+    cursor: pointer;
+    padding: 0.5rem;
+    line-height: 1; /* Prevent extra spacing */
+}
+/* In style.css */
+.external-link {
+    color: black;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.external-link:hover{
+    background-color: rgba(0, 0, 0, 0.253);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap; /* Allow logo and toggle to wrap if space is very tight */
+        gap: 10px; /* Add a small gap if they wrap */
+    }
+
+    nav ul {
+        display: none; /* Hidden by default, JS will toggle .active class */
+        position: absolute;
+        top: 100%; /* Position below the header */
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color); /* Match header */
+        flex-direction: column;
+        width: 100%;
+        padding: 0.5rem 0; /* Padding for the dropdown container */
+        margin-top: 0; /* Reset margin */
+        box-shadow: var(--shadow-soft);
+        z-index: 999; /* Ensure it's above content but below sticky header if issues */
+    }
+
+    nav ul.active { /* This class will be added by JavaScript to show the menu */
+        display: flex;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 0; /* Handled by link padding */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 0.8rem 1rem; /* Generous padding for tap targets */
+    }
+
+    /* Add border to all but the last nav item in mobile view */
+    nav ul li:not(:last-child) a {
+        border-bottom: 1px solid var(--secondary-color);
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .team-section h2 {
+        font-size: 2rem;
+    }
+
+    .person-card h3 {
+        font-size: 1.4rem;
+    }
+
+    nav .logo {
+        font-size: 1.5rem; /* Slightly reduce logo size on mobile */
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger icon on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+}
+/* Navigation Dropdown */
+nav ul li.dropdown {
+    position: relative; /* Establishes a positioning context for the dropdown menu */
+}
+
+nav ul li.dropdown .dropdown-toggle .arrow-down {
+    font-size: 0.8em; /* Adjust arrow size if needed */
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+nav ul li.dropdown.open .dropdown-toggle .arrow-down {
+    transform: rotate(180deg); /* Rotate arrow when dropdown is open */
+}
+
+nav ul li .dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Position it right below the "Explore More" link */
+    left: 0;
+    background-color: var(--primary-color); /* Match your nav background or choose another */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    min-width: 200px; /* Adjust as needed */
+    z-index: 1001; /* Ensure it's above other nav items and hero */
+    border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);
+    box-shadow: var(--shadow-soft);
+}
+
+nav ul li.dropdown.open .dropdown-menu {
+    display: block; /* Show when .open class is added */
+}
+
+nav ul li .dropdown-menu li {
+    width: 100%;
+    margin-left: 0; /* Reset margin from main nav items */
+}
+
+nav ul li .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--text-light);
+    text-decoration: none;
+    white-space: nowrap; /* Prevent text wrapping */
+    border-bottom: 1px solid var(--secondary-color); /* Optional separator */
+}
+
+nav ul li .dropdown-menu li:last-child a {
+    border-bottom: none; /* No border for the last item */
+}
+
+nav ul li .dropdown-menu li a:hover {
+    background-color: var(--secondary-color); /* Hover effect for dropdown items */
+    color: var(--text-nav-hover);
+}
+
+/* Adjustments for mobile view if the dropdown interferes with the hamburger menu */
+@media (max-width: 768px) {
+    nav ul li.dropdown .dropdown-menu {
+        position: static; /* Make dropdown items flow naturally in mobile menu */
+        box-shadow: none;
+        border-radius: 0;
+        min-width: 100%;
+        border-top: 1px solid var(--secondary-color); /* Add a top border in mobile */
+    }
+
+    nav ul li.dropdown .dropdown-menu li a {
+        padding: 0.8rem 1rem; /* Match other mobile nav link padding */
+    }
+
+    nav ul li.dropdown .dropdown-toggle .arrow-down {
+        /* Optionally hide or adjust arrow on mobile if it looks odd with hamburger */
+        /* display: none; */
+    }
+}

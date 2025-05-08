@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="letter-n.png" type="image/png">
+    <title>NeuroNotes by Josh</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- You can link to a Google Font for a modern look, e.g., Montserrat or Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                NeuroNotes</div>
+            <!-- Add this button for the mobile menu -->
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                &#9776; <!-- This is a common HTML entity for the hamburger icon -->
+            </button>
+            <ul id="nav-menu"> <!-- Added an ID here for JS and ARIA -->
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle">Explore More <span class="arrow-down">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#social-media-apps">Most Used Apps</a></li>
+                        <li><a href="#top-games">Top games</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <h1>Explore My Project</h1>
+            <p>Discover exciting tools and AI integrations like ChatGPT! and more.</p>
+        </section>
+
+        <section id="features" class="team-section"> 
+            <h2>Artificial Intelligence</h2>
+            <div class="team-grid">
+                <!-- ChatGPT Feature Card -->
+                <div class="person-card">
+                    <img src="chatgpt.png" width="120px" height="120px">
+                    <h3>ChatGPT Integration</h3>
+                    <p class="person-role">Category: AI Language Model</p>
+                    <p class="person-description">Explore the capabilities of ChatGPT. Ask questions, generate text, and see how it can assist you.</p>
+
+                    <!-- This section will be hidden by default and shown on button click -->
+                    <div class="person-details-content" id="chatgpt-details">
+                        <h4>What is ChatGPT?</h4>
+                        <!-- You might want to show the same image again, or a larger/different one -->
+                        <!-- <img src="placeholder-chatgpt-large.jpg" alt="ChatGPT Detailed View" class="person-image-expanded"> -->
+                        <p>
+                            ChatGPT, which stands for Chat Generative Pre-trained Transformer, is a large language model-based chatbot developed by OpenAI.
+                            It is capable of understanding and generating human-like text based on the input it receives.
+                            You can use it for a wide variety of tasks, such as answering questions, writing essays, summarizing text,
+                            translating languages, generating creative content, and even writing code. It learns from vast amounts of text data,
+                            allowing it to engage in coherent and contextually relevant conversations.
+                        </p>
+                        <p>
+                            <a href="https://chat.openai.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit ChatGPT</a>
+                            <!-- Replace with the actual link to ChatGPT -->
+                        </p>
+                    </div>
+
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="chatgpt-details">Read more about ChatGPT</button>
+                </div>
+
+                <!-- Gemini AI Card -->
+                <div class="person-card">
+                    <img src="Gemini.png" width="120px" height="120px">
+                    <h3>Gemini AI</h3>
+                    <p class="person-role">Category: Multimodal AI Model</p>
+                    <p class="person-description">Discover Gemini, Google's next-generation AI model, capable of understanding and operating across various types of information like text, code, images, and video.</p>
+
+                    <div class="person-details-content" id="gemini-details">
+                        <h4>About Gemini AI</h4>
+                        <p>
+                            Gemini is Google's most capable and flexible AI model yet. Built from the ground up to be multimodal,
+                            it can seamlessly understand, operate across, and combine different types of information including text,
+                            code, audio, image, and video. Gemini is designed for a wide range of applications, from powering
+                            advanced chatbots and virtual assistants to enabling new breakthroughs in scientific research and creative endeavors.
+                            It comes in various sizes (Ultra, Pro, and Nano) to suit different tasks and devices.
+                        </p>
+                        <p>
+                            <a href="https://deepmind.google/technologies/gemini/" target="_blank" rel="noopener noreferrer" class="external-link">Learn more about Gemini on Google DeepMind</a>
+                            <!-- Replace with the most appropriate link for Gemini -->
+                        </p>
+                    </div>
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="gemini-details">Learn about Gemini</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="meta.png" width="120px" height="120px">
+                    <h3>Meta AI</h3>
+                    <p class="person-role">Category: AI Research Division</p>
+                    <p class="person-description">Discover Meta AI’s open and responsible approach to AI development, powering innovations like LLaMA and FAIR research.</p>
+                
+                    <!-- This section will be hidden by default and shown on button click -->
+                    <div class="person-details-content" id="metaai-details">
+                        <h4>What is Meta AI?</h4>
+                        <p>
+                            Meta AI is the artificial intelligence division of Meta (formerly Facebook), focused on advancing state-of-the-art AI through open science and collaborative research.
+                            It’s known for creating powerful open-weight models like the LLaMA family, contributing to fields such as natural language processing, computer vision, and robotics.
+                            Meta AI also runs FAIR (Facebook AI Research), which produces some of the most cited academic work in AI today.
+                        </p>
+                        <p>
+                            <a href="https://ai.meta.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Meta AI</a>
+                        </p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="metaai-details">Read more about Meta AI</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="OpenAI.jpg" width="120px" height="120px">
+                    <h3>OpenAI</h3>
+                    <p class="person-role">Category: AI Research & Development</p>
+                    <p class="person-description">Learn how OpenAI is developing safe and powerful artificial intelligence, including GPT models and tools like ChatGPT.</p>
+                
+                    <div class="person-details-content" id="openai-details">
+                        <h4>What is OpenAI?</h4>
+                        <p>
+                            OpenAI is a leading AI research and deployment company, founded in 2015 with a mission to ensure that artificial general intelligence (AGI)
+                            benefits all of humanity. OpenAI develops cutting-edge technologies such as the GPT family of language models, Codex, and DALL·E.
+                            Its most well-known product, ChatGPT, is used by millions for education, productivity, and creativity.
+                            OpenAI emphasizes safety, alignment, and responsible deployment in AI research.
+                        </p>
+                        <p>
+                            <a href="https://openai.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit OpenAI</a>
+                        </p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="openai-details">Read more about OpenAI</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="anthro.png" width="120px" height="120px">
+                    <h3>Anthropic</h3>
+                    <p class="person-role">Category: AI Safety Company</p>
+                    <p class="person-description">Explore Anthropic's mission to build reliable, interpretable, and steerable AI systems like Claude.</p>
+                
+                    <div class="person-details-content" id="anthropic-details">
+                        <h4>What is Anthropic?</h4>
+                        <p>
+                            Anthropic is an AI research company founded by former OpenAI members, focused on creating AI systems that are safe and aligned with human intentions.
+                            It is best known for the Claude family of models, which are trained using a method called Constitutional AI to ensure ethical and controllable behavior.
+                            Anthropic's goal is to build general AI that people can trust, making safety a central part of every stage of development.
+                        </p>
+                        <p>
+                            <a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Anthropic</a>
+                        </p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="anthropic-details">Read more about Anthropic</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="mistral.jpg" width="120px" height="120px">
+                    <h3>Mistral AI</h3>
+                    <p class="person-role">Category: Open-Source AI Company</p>
+                    <p class="person-description">Check out Mistral AI’s high-performance, open-weight language models designed for developers and researchers.</p>
+                
+                    <div class="person-details-content" id="mistral-details">
+                        <h4>What is Mistral AI?</h4>
+                        <p>
+                            Mistral AI is a European AI startup known for releasing top-tier open-weight language models such as Mistral 7B and Mixtral.
+                            Their mission is to democratize access to cutting-edge AI by focusing on efficiency, transparency, and community-driven development.
+                            Mistral's models are optimized for fast inference and flexible integration, enabling developers to build AI solutions without vendor lock-in.
+                        </p>
+                        <p>
+                            <a href="https://mistral.ai/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Mistral AI</a>
+                        </p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="mistral-details">Read more about Mistral AI</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="claude.jpeg" width="120px" height="120px" alt="Claude Logo">
+                    <h3>Claude AI</h3>
+                    <p class="person-role">Category: AI Language Model</p>
+                    <p class="person-description">Claude is an AI developed by Anthropic that focuses on safety and ethical AI principles. It assists with text generation and decision-making tasks.</p>
+                
+                    <div class="person-details-content" id="claude-details">
+                        <h4>What is Claude AI?</h4>
+                        <p>
+                            Claude is an AI language model created by Anthropic, designed with a focus on safety and ethical use of AI. It generates text, assists with decision-making, 
+                            and ensures the outputs adhere to responsible guidelines and standards.
+                        </p>
+                        <p><a href="https://www.anthropic.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Claude AI</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="claude-details">Read more about Claude AI</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="lama.jpg" width="120px" height="120px" alt="LLaMA Logo">
+                    <h3>LLaMA AI</h3>
+                    <p class="person-role">Category: Open-Source Language Model</p>
+                    <p class="person-description">LLaMA is Meta's open-source AI language model designed for research and development, empowering AI projects with its powerful capabilities.</p>
+                
+                    <div class="person-details-content" id="llama-details">
+                        <h4>What is LLaMA AI?</h4>
+                        <p>
+                            LLaMA (Large Language Model Meta AI) is an open-source language model developed by Meta. It is designed to be flexible and powerful, 
+                            suitable for research purposes and development of AI tools. It is one of the latest models in the open-source AI community.
+                        </p>
+                        <p><a href="https://ai.facebook.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit LLaMA AI</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="llama-details">Read more about LLaMA AI</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Somewhere in your <main> section, after the #features section or #about section -->
+        <section id="social-media-apps" class="team-section"> 
+            <h2>Most Used Apps</h2>
+            <div class="team-grid">
+            <div class="person-card">
+                <img src="instagram.jpg" width="120px" height="120px" alt="Instagram Logo">
+                <h3>Instagram</h3>
+                <p class="person-role">Category: Photo & Video Sharing</p>
+                <p class="person-description">A visual social media platform to share photos, videos, and Stories with followers.</p>
+    
+                <div class="person-details-content" id="instagram-details">
+                    <h4>What is Instagram?</h4>
+                    <p>
+                        Instagram is a social networking app created for sharing photos and videos from a smartphone. Users can upload content, apply filters, and connect with others through likes, comments, and direct messages. It’s owned by Meta (formerly Facebook).
+                    </p>
+                    <p><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Instagram</a></p>
+                </div>
+    
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="instagram-details">Read more about Instagram</button>
+            </div>
+    
+            <!-- TikTok -->
+            <div class="person-card">
+                <img src="tiktok.jpg" width="120px" height="120px" alt="TikTok Logo">
+                <h3>TikTok</h3>
+                <p class="person-role">Category: Short Video Platform</p>
+                <p class="person-description">A platform to create and discover short-form music, dance, and comedy videos.</p>
+    
+                <div class="person-details-content" id="tiktok-details">
+                    <h4>What is TikTok?</h4>
+                    <p>
+                        TikTok is a popular app for creating and sharing short videos, often with music and effects. Known for its viral challenges and algorithmic content discovery, TikTok has become a cultural trendsetter across the globe.
+                    </p>
+                    <p><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit TikTok</a></p>
+                </div>
+    
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="tiktok-details">Read more about TikTok</button>
+            </div>
+    
+            <!-- WhatsApp -->
+            <div class="person-card">
+                <img src="whatsapp.png" width="120px" height="120px" alt="WhatsApp Logo">
+                <h3>WhatsApp</h3>
+                <p class="person-role">Category: Messaging</p>
+                <p class="person-description">A secure messaging app used for chats, voice, and video calls worldwide.</p>
+    
+                <div class="person-details-content" id="whatsapp-details">
+                    <h4>What is WhatsApp?</h4>
+                    <p>
+                        WhatsApp is a free messaging app that uses internet data to send messages, make calls, and share media. It's known for end-to-end encryption and is widely used for personal and business communication.
+                    </p>
+                    <p><a href="https://www.whatsapp.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit WhatsApp</a></p>
+                </div>
+    
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="whatsapp-details">Read more about WhatsApp</button>
+            </div>
+
+            <div class="person-card">
+                <img src="facebook.png" width="120px" height="120px" alt="Facebook Logo">
+                <h3>Facebook</h3>
+                <p class="person-role">Category: Social Networking</p>
+                <p class="person-description">Facebook helps you connect and share with friends, family, and communities.</p>
+            
+                <div class="person-details-content" id="facebook-details">
+                    <h4>What is Facebook?</h4>
+                    <p>
+                        Facebook is one of the oldest and most widely used social networks globally. It allows users to share posts, join groups, create events, and connect with people worldwide. Owned by Meta, it also serves as a hub for business pages and advertising.
+                    </p>
+                    <p><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Facebook</a></p>
+                </div>
+            
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="facebook-details">Read more about Facebook</button>
+            </div>
+            
+            <!-- YouTube -->
+            <div class="person-card">
+                <img src="youtube.jpg" width="120px" height="120px" alt="YouTube Logo">
+                <h3>YouTube</h3>
+                <p class="person-role">Category: Video Sharing</p>
+                <p class="person-description">Watch, upload, and share videos on the largest video platform on the internet.</p>
+            
+                <div class="person-details-content" id="youtube-details">
+                    <h4>What is YouTube?</h4>
+                    <p>
+                        YouTube is the world's most popular video platform where users can watch, upload, comment on, and share videos. Owned by Google, it supports creators, influencers, educators, and streamers across countless categories from entertainment to education.
+                    </p>
+                    <p><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit YouTube</a></p>
+                </div>
+            
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="youtube-details">Read more about YouTube</button>
+            </div>
+            
+            <!-- Snapchat -->
+            <div class="person-card">
+                <img src="snapchat.jpg" width="120px" height="120px" alt="Snapchat Logo">
+                <h3>Snapchat</h3>
+                <p class="person-role">Category: Multimedia Messaging</p>
+                <p class="person-description">Send photos and videos that disappear after being viewed, with creative filters and AR features.</p>
+            
+                <div class="person-details-content" id="snapchat-details">
+                    <h4>What is Snapchat?</h4>
+                    <p>
+                        Snapchat is a mobile messaging app known for its disappearing messages and creative lenses. Users can send Snaps, share Stories, and explore content through the Discover feed. It’s especially popular among younger audiences for real-time visual communication.
+                    </p>
+                    <p><a href="https://www.snapchat.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Snapchat</a></p>
+                </div>
+            
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="snapchat-details">Read more about Snapchat</button>
+            </div>
+            
+            <!-- Twitter/X -->
+            <div class="person-card">
+                <img src="twitter.jpg" width="120px" height="120px" alt="Twitter Logo">
+                <h3>Twitter (X)</h3>
+                <p class="person-role">Category: Microblogging</p>
+                <p class="person-description">A platform for real-time updates, trending topics, and short-form content known as tweets.</p>
+            
+                <div class="person-details-content" id="twitter-details">
+                    <h4>What is Twitter (X)?</h4>
+                    <p>
+                        Twitter, rebranded as X, is a microblogging platform where users post short messages (tweets) to express opinions, follow trends, and interact with global communities. Known for news and live conversations, it's used by individuals, organizations, and governments.
+                    </p>
+                    <p><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Twitter/X</a></p>
+                </div>
+            
+                <button class="btn-toggle-details" aria-expanded="false" aria-controls="twitter-details">Read more about Twitter</button>
+            </div> 
+        </div>
+        </section>
+
+        <section id="top-games" class="team-section"> 
+            <h2>Most Played Games</h2>
+            <div class="team-grid">
+        
+                <!-- Minecraft -->
+                <div class="person-card">
+                    <img src="minecraft.jpg" width="120px" height="120px" alt="Minecraft Logo">
+                    <h3>Minecraft</h3>
+                    <p class="person-role">Category: Sandbox / Survival</p>
+                    <p class="person-description">Build, explore, and survive in a blocky world of endless creativity.</p>
+        
+                    <div class="person-details-content" id="minecraft-details">
+                        <h4>What is Minecraft?</h4>
+                        <p>
+                            Minecraft is a sandbox game developed by Mojang that allows players to build and explore infinite worlds made of blocks. With creative, survival, and multiplayer modes, it's one of the best-selling games of all time and a favorite for both kids and adults.
+                        </p>
+                        <p><a href="https://www.minecraft.net/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Minecraft</a></p>
+                    </div>
+        
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="minecraft-details">Read more about Minecraft</button>
+                </div>
+        
+                <!-- Fortnite -->
+                <div class="person-card">
+                    <img src="fortnite.jpg" width="120px" height="120px" alt="Fortnite Logo">
+                    <h3>Fortnite</h3>
+                    <p class="person-role">Category: Battle Royale / Shooter</p>
+                    <p class="person-description">A fast-paced battle royale game filled with building, dancing, and combat.</p>
+        
+                    <div class="person-details-content" id="fortnite-details">
+                        <h4>What is Fortnite?</h4>
+                        <p>
+                            Fortnite is an online battle royale game developed by Epic Games where 100 players compete to be the last one standing. Known for its vibrant visuals, creative building mechanics, and regular live events, it's a cultural phenomenon among gamers worldwide.
+                        </p>
+                        <p><a href="https://www.fortnite.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Fortnite</a></p>
+                    </div>
+        
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="fortnite-details">Read more about Fortnite</button>
+                </div>
+        
+                <!-- PUBG -->
+                <div class="person-card">
+                    <img src="pubg.jpg" width="120px" height="120px" alt="PUBG Logo">
+                    <h3>PUBG: Battlegrounds</h3>
+                    <p class="person-role">Category: Battle Royale / Shooter</p>
+                    <p class="person-description">A realistic battle royale game that helped define the genre.</p>
+        
+                    <div class="person-details-content" id="pubg-details">
+                        <h4>What is PUBG?</h4>
+                        <p>
+                            PlayerUnknown’s Battlegrounds (PUBG) is a tactical shooter where players parachute onto an island and fight to be the last person or team alive. Its realistic gunplay and survival mechanics made it a global success and pioneer of the battle royale trend.
+                        </p>
+                        <p><a href="https://pubg.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit PUBG</a></p>
+                    </div>
+        
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="pubg-details">Read more about PUBG</button>
+                </div>
+        
+                <!-- Roblox -->
+                <div class="person-card">
+                    <img src="roblox.jpg" width="120px" height="120px" alt="Roblox Logo">
+                    <h3>Roblox</h3>
+                    <p class="person-role">Category: Game Creation Platform</p>
+                    <p class="person-description">Create and play user-generated games in a massive virtual universe.</p>
+        
+                    <div class="person-details-content" id="roblox-details">
+                        <h4>What is Roblox?</h4>
+                        <p>
+                            Roblox is both a game and a game creation platform where users can build and play games made by others. It's hugely popular among younger audiences and offers a limitless variety of user-generated content across genres.
+                        </p>
+                        <p><a href="https://www.roblox.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Roblox</a></p>
+                    </div>
+        
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="roblox-details">Read more about Roblox</button>
+                </div>
+
+                <div class="person-card">
+                    <img src="callofduty.jpg" width="120px" height="120px" alt="Call of Duty Logo">
+                    <h3>Call of Duty</h3>
+                    <p class="person-role">Category: First-Person Shooter</p>
+                    <p class="person-description">A blockbuster FPS franchise known for its action-packed campaigns and competitive multiplayer.</p>
+                
+                    <div class="person-details-content" id="cod-details">
+                        <h4>What is Call of Duty?</h4>
+                        <p>
+                            Call of Duty is one of the best-selling and most-played video game series globally. Developed by Activision, it features high-intensity warfare, online multiplayer, and cooperative modes. Titles like Warzone and Modern Warfare have kept millions of players engaged daily.
+                        </p>
+                        <p><a href="https://www.callofduty.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Call of Duty</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="cod-details">Read more about Call of Duty</button>
+                </div>
+                
+                <!-- League of Legends -->
+                <div class="person-card">
+                    <img src="lol.jpg" width="120px" height="120px" alt="League of Legends Logo">
+                    <h3>League of Legends</h3>
+                    <p class="person-role">Category: MOBA (Multiplayer Online Battle Arena)</p>
+                    <p class="person-description">A competitive 5v5 strategy game where champions clash in fast-paced battles.</p>
+                
+                    <div class="person-details-content" id="lol-details">
+                        <h4>What is League of Legends?</h4>
+                        <p>
+                            League of Legends (LoL), developed by Riot Games, is a highly strategic and team-based online multiplayer game. Players select unique champions and battle to destroy the enemy’s nexus in a complex arena. It's a leader in the global esports scene.
+                        </p>
+                        <p><a href="https://www.leagueoflegends.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit League of Legends</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="lol-details">Read more about League of Legends</button>
+                </div>
+                
+                <!-- Genshin Impact -->
+                <div class="person-card">
+                    <img src="genshin.jpeg" width="120px" height="120px" alt="Genshin Impact Logo">
+                    <h3>Genshin Impact</h3>
+                    <p class="person-role">Category: Action RPG / Open World</p>
+                    <p class="person-description">Explore the fantasy world of Teyvat in this anime-style RPG with elemental combat.</p>
+                
+                    <div class="person-details-content" id="genshin-details">
+                        <h4>What is Genshin Impact?</h4>
+                        <p>
+                            Genshin Impact is a free-to-play action RPG developed by miHoYo, offering open-world exploration, story-driven quests, and elemental combat mechanics. Its visuals, music, and cross-platform play have attracted millions of players worldwide.
+                        </p>
+                        <p><a href="https://genshin.hoyoverse.com/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Genshin Impact</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="genshin-details">Read more about Genshin Impact</button>
+                </div>
+                
+                <!-- Among Us -->
+                <div class="person-card">
+                    <img src="amongus.jpg" width="120px" height="120px" alt="Among Us Logo">
+                    <h3>Among Us</h3>
+                    <p class="person-role">Category: Party / Social Deduction</p>
+                    <p class="person-description">A multiplayer game of teamwork and betrayal aboard a spaceship or alien base.</p>
+                
+                    <div class="person-details-content" id="amongus-details">
+                        <h4>What is Among Us?</h4>
+                        <p>
+                            Among Us is a social deduction game where crewmates complete tasks while trying to identify the impostors among them. Popularized during the pandemic, it emphasizes communication, deception, and teamwork in a fun and chaotic setting.
+                        </p>
+                        <p><a href="https://www.innersloth.com/games/among-us/" target="_blank" rel="noopener noreferrer" class="external-link">Visit Among Us</a></p>
+                    </div>
+                
+                    <button class="btn-toggle-details" aria-expanded="false" aria-controls="amongus-details">Read more about Among Us</button>
+                </div>
+        
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Neuronotes by Josh</h2>
+            <p>Welcome to my platform — your go-to place for discovering powerful and trending AI tools, apps, and games. Each AI is showcased with a clear description and a direct link so you can easily visit the official site and try it out yourself. Whether you're into productivity, creativity, or AI-powered entertainment, I’ve organized the most useful and exciting options all in one place. Have suggestions or want me to feature something new? Just click one of the logos below to message me directly — I’m Josh, and I’d love to hear from you!</p>
+        <hr style="2px solid black">
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+            <a href="https://www.facebook.com/JoshCaffdial" target="_blank"><img src="fb.png" width="20px" height="20px"></a>
+            <a href="https://www.instagram.com/joshcaffeinated" target="_blank"><img src="social.png" width="20px" height="20px"></a>
+            <a href="https://www.github.com/JOSHDEVCAFF" target="_blank"><img src="github.png" width="20px" height="20px"></a>
+            <a href="https://youtube.com/@randomusic16?si=4r5bTFfF0XLnLAGo" target="_blank"><img src="youtube.png" width="20px" height="20px"></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=joshscz123@gmail.com&su=Inquiry" target="_blank"><img src="gmail.png" width="20px" height="20px"></a>
+        </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 JoshIdea Project. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
